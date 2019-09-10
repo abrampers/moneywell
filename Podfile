@@ -6,6 +6,7 @@ target 'Moneywell' do
   use_frameworks!
 
   # Pods for Moneywell
-  pod 'RxSwift'
-  pod 'RxCocoa'
+  pod 'RxSwift', '~> 5.0'
+  pod 'RxCocoa', '~> 5.0'
+  pod 'SnapKit', '~> 4.0'
 end
