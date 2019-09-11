@@ -15,15 +15,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        let navigationController = UINavigationController(rootViewController: HomeViewController())
-        navigationController.navigationBar.isTranslucent = true
-        navigationController.navigationBar.prefersLargeTitles = true
-        navigationController.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-        navigationController.navigationBar.shadowImage = UIImage()
+        
+        let tabBar = UITabBarController()
+        
+        let homeNavCon = DefaultNavigationController(rootViewController: HomeViewController())
+        let categoryNavCon = DefaultNavigationController(rootViewController: CategoryViewController())
+        tabBar.viewControllers = [homeNavCon, categoryNavCon]
         
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = navigationController
+        window?.rootViewController = tabBar
         window?.makeKeyAndVisible()
         
         return true

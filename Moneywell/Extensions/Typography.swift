@@ -29,23 +29,23 @@ public class AirbnbCereal {
     }
     
     internal static var bold: UIFont {
-        return UIFont(name: "AirbnbCereal-Bold", size: 1)!
+        return UIFont(name: "AirbnbCereal-Bold", size: 1) ?? UIFont.systemFont(ofSize: 1, weight: .bold)
     }
     
     internal static var extraBold: UIFont {
-        return UIFont(name: "AirbnbCereal-ExtraBold", size: 1)!
+        return UIFont(name: "AirbnbCereal-ExtraBold", size: 1) ?? UIFont.systemFont(ofSize: 1, weight: .heavy)
     }
     
     internal static var book: UIFont {
-        return UIFont(name: "AirbnbCereal-Book", size: 1)!
+        return UIFont(name: "AirbnbCereal-Book", size: 1) ?? UIFont.systemFont(ofSize: 1, weight: .regular)
     }
     
     internal static var medium: UIFont {
-        return UIFont(name: "AirbnbCereal-Medium", size: 1)!
+        return UIFont(name: "AirbnbCereal-Medium", size: 1) ?? UIFont.systemFont(ofSize: 1, weight: .medium)
     }
     
     internal static var light: UIFont {
-        return UIFont(name: "AirbnbCereal-Light", size: 1)!
+        return UIFont(name: "AirbnbCereal-Light", size: 1) ?? UIFont.systemFont(ofSize: 1, weight: .light)
     }
 }
 

@@ -3,14 +3,24 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		21503AD3232901AF00761B71 /* HomeNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21503ACF232901AF00761B71 /* HomeNavigator.swift */; };
+		21503AD4232901AF00761B71 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21503AD0232901AF00761B71 /* HomeViewController.swift */; };
+		21503AD82329104500761B71 /* Observable+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21503AD72329104500761B71 /* Observable+Extensions.swift */; };
+		21503ADA2329119300761B71 /* HahaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21503AD92329119300761B71 /* HahaViewController.swift */; };
+		21503ADD2329274400761B71 /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21503ADC2329274400761B71 /* TransactionTableViewCell.swift */; };
+		21503ADF2329280A00761B71 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21503ADE2329280A00761B71 /* Transaction.swift */; };
+		21503AE12329396500761B71 /* DefaultNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21503AE02329396500761B71 /* DefaultNavigationController.swift */; };
+		216981FE232779A7009455FF /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216981FD232779A7009455FF /* Category.swift */; };
+		2169820123277D7D009455FF /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2169820023277D7D009455FF /* CategoryTableViewCell.swift */; };
+		21698203232788D5009455FF /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21698202232788D5009455FF /* Int+Extension.swift */; };
 		21D603B32326529900F075E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D603B22326529900F075E8 /* AppDelegate.swift */; };
 		21D603BA2326529B00F075E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21D603B92326529B00F075E8 /* Assets.xcassets */; };
 		21D603BD2326529B00F075E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21D603BB2326529B00F075E8 /* LaunchScreen.storyboard */; };
-		21D603C52326545E00F075E8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D603C42326545E00F075E8 /* HomeViewController.swift */; };
+		21D603C52326545E00F075E8 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D603C42326545E00F075E8 /* CategoryViewController.swift */; };
 		21D603C8232654A900F075E8 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D603C7232654A900F075E8 /* UIColor.swift */; };
 		21D603CA232654B900F075E8 /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D603C9232654B900F075E8 /* Typography.swift */; };
 		21D603D12326563000F075E8 /* AirbnbCereal-Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 21D603CC2326563000F075E8 /* AirbnbCereal-Book.ttf */; };
@@ -18,19 +28,28 @@
 		21D603D32326563000F075E8 /* AirbnbCereal-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 21D603CE2326563000F075E8 /* AirbnbCereal-Bold.ttf */; };
 		21D603D42326563000F075E8 /* AirbnbCereal-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 21D603CF2326563000F075E8 /* AirbnbCereal-Medium.ttf */; };
 		21D603D52326563000F075E8 /* AirbnbCereal-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 21D603D02326563000F075E8 /* AirbnbCereal-Light.ttf */; };
-		21D603D823265D6D00F075E8 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D603D723265D6D00F075E8 /* HomeViewModel.swift */; };
 		21D603DB23265D9800F075E8 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D603DA23265D9800F075E8 /* ViewModelType.swift */; };
 		7FB1AD37DF5097BCD2D2742C /* Pods_Moneywell.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68417F12D62562F4F3525DCE /* Pods_Moneywell.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1DD23306FEA1F6FDBEC8A15E /* Pods-Moneywell.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moneywell.release.xcconfig"; path = "Target Support Files/Pods-Moneywell/Pods-Moneywell.release.xcconfig"; sourceTree = "<group>"; };
+		21503ACF232901AF00761B71 /* HomeNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavigator.swift; sourceTree = "<group>"; };
+		21503AD0232901AF00761B71 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		21503AD72329104500761B71 /* Observable+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+Extensions.swift"; sourceTree = "<group>"; };
+		21503AD92329119300761B71 /* HahaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HahaViewController.swift; sourceTree = "<group>"; };
+		21503ADC2329274400761B71 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
+		21503ADE2329280A00761B71 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		21503AE02329396500761B71 /* DefaultNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultNavigationController.swift; sourceTree = "<group>"; };
+		216981FD232779A7009455FF /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		2169820023277D7D009455FF /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
+		21698202232788D5009455FF /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
 		21D603AF2326529900F075E8 /* Moneywell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moneywell.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21D603B22326529900F075E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		21D603B92326529B00F075E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		21D603BC2326529B00F075E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		21D603BE2326529B00F075E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		21D603C42326545E00F075E8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		21D603C42326545E00F075E8 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		21D603C7232654A900F075E8 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		21D603C9232654B900F075E8 /* Typography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typography.swift; sourceTree = "<group>"; };
 		21D603CC2326563000F075E8 /* AirbnbCereal-Book.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AirbnbCereal-Book.ttf"; sourceTree = "<group>"; };
@@ -38,7 +57,6 @@
 		21D603CE2326563000F075E8 /* AirbnbCereal-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AirbnbCereal-Bold.ttf"; sourceTree = "<group>"; };
 		21D603CF2326563000F075E8 /* AirbnbCereal-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AirbnbCereal-Medium.ttf"; sourceTree = "<group>"; };
 		21D603D02326563000F075E8 /* AirbnbCereal-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AirbnbCereal-Light.ttf"; sourceTree = "<group>"; };
-		21D603D723265D6D00F075E8 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		21D603DA23265D9800F075E8 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		68417F12D62562F4F3525DCE /* Pods_Moneywell.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Moneywell.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4EB5C09788DE7B3102C3352 /* Pods-Moneywell.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moneywell.debug.xcconfig"; path = "Target Support Files/Pods-Moneywell/Pods-Moneywell.debug.xcconfig"; sourceTree = "<group>"; };
@@ -56,6 +74,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		21503ADB2329272100761B71 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				21503ADC2329274400761B71 /* TransactionTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		216981FC23277919009455FF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				216981FD232779A7009455FF /* Category.swift */,
+				21503ADE2329280A00761B71 /* Transaction.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		216981FF23277CC0009455FF /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				2169820023277D7D009455FF /* CategoryTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		216982042327CF1D009455FF /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				216981FF23277CC0009455FF /* Cell */,
+				21D603C42326545E00F075E8 /* CategoryViewController.swift */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
 		21D603A62326529900F075E8 = {
 			isa = PBXGroup;
 			children = (
@@ -77,10 +129,12 @@
 		21D603B12326529900F075E8 /* Moneywell */ = {
 			isa = PBXGroup;
 			children = (
+				216982042327CF1D009455FF /* Category */,
+				216981FC23277919009455FF /* Model */,
 				21D603D923265D8900F075E8 /* Shared */,
 				21D603D623265CE700F075E8 /* Home */,
 				21D603CB232655EC00F075E8 /* Resources */,
-				21D603C62326548C00F075E8 /* UIExtensions */,
+				21D603C62326548C00F075E8 /* Extensions */,
 				21D603B22326529900F075E8 /* AppDelegate.swift */,
 				21D603B92326529B00F075E8 /* Assets.xcassets */,
 				21D603BB2326529B00F075E8 /* LaunchScreen.storyboard */,
@@ -89,13 +143,15 @@
 			path = Moneywell;
 			sourceTree = "<group>";
 		};
-		21D603C62326548C00F075E8 /* UIExtensions */ = {
+		21D603C62326548C00F075E8 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				21D603C7232654A900F075E8 /* UIColor.swift */,
 				21D603C9232654B900F075E8 /* Typography.swift */,
+				21698202232788D5009455FF /* Int+Extension.swift */,
+				21503AD72329104500761B71 /* Observable+Extensions.swift */,
 			);
-			path = UIExtensions;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		21D603CB232655EC00F075E8 /* Resources */ = {
@@ -113,8 +169,9 @@
 		21D603D623265CE700F075E8 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				21D603C42326545E00F075E8 /* HomeViewController.swift */,
-				21D603D723265D6D00F075E8 /* HomeViewModel.swift */,
+				21503ADB2329272100761B71 /* Cell */,
+				21503ACF232901AF00761B71 /* HomeNavigator.swift */,
+				21503AD0232901AF00761B71 /* HomeViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -123,6 +180,8 @@
 			isa = PBXGroup;
 			children = (
 				21D603DA23265D9800F075E8 /* ViewModelType.swift */,
+				21503AD92329119300761B71 /* HahaViewController.swift */,
+				21503AE02329396500761B71 /* DefaultNavigationController.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -141,7 +200,6 @@
 				E4EB5C09788DE7B3102C3352 /* Pods-Moneywell.debug.xcconfig */,
 				1DD23306FEA1F6FDBEC8A15E /* Pods-Moneywell.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -264,12 +322,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21503ADF2329280A00761B71 /* Transaction.swift in Sources */,
+				21503AE12329396500761B71 /* DefaultNavigationController.swift in Sources */,
+				21503ADA2329119300761B71 /* HahaViewController.swift in Sources */,
 				21D603B32326529900F075E8 /* AppDelegate.swift in Sources */,
 				21D603C8232654A900F075E8 /* UIColor.swift in Sources */,
+				216981FE232779A7009455FF /* Category.swift in Sources */,
+				21698203232788D5009455FF /* Int+Extension.swift in Sources */,
+				21503AD3232901AF00761B71 /* HomeNavigator.swift in Sources */,
+				21503ADD2329274400761B71 /* TransactionTableViewCell.swift in Sources */,
+				21503AD4232901AF00761B71 /* HomeViewController.swift in Sources */,
 				21D603DB23265D9800F075E8 /* ViewModelType.swift in Sources */,
 				21D603CA232654B900F075E8 /* Typography.swift in Sources */,
-				21D603D823265D6D00F075E8 /* HomeViewModel.swift in Sources */,
-				21D603C52326545E00F075E8 /* HomeViewController.swift in Sources */,
+				21D603C52326545E00F075E8 /* CategoryViewController.swift in Sources */,
+				21503AD82329104500761B71 /* Observable+Extensions.swift in Sources */,
+				2169820123277D7D009455FF /* CategoryTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,7 +485,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = abrampers.Moneywell;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -437,7 +504,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = abrampers.Moneywell;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
