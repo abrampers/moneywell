@@ -12,6 +12,7 @@ import RxCocoa
 
 internal class FamilyViewController: UIViewController {
     private let rx_disposeBag = DisposeBag()
+    private let categorySubject = PublishSubject<Int>()
     
     private lazy var navigator: FamilyNavigator = {
         let nav = DefaultFamilyNavigator(navigationController: self.navigationController)
@@ -40,7 +41,7 @@ internal class FamilyViewController: UIViewController {
         view.backgroundColor = .clear
         view.tableHeaderView = headerView
         view.separatorStyle = .none
-        view.allowsSelection = false
+        view.allowsSelection = true
         view.isScrollEnabled = false
         
         return view
@@ -87,6 +88,8 @@ internal class FamilyViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
+        tabBarItem = UITabBarItem(title: "", image: UIImage(named: "spendings-deselected"), selectedImage: UIImage(named: "spendings-selected"))
+        
         setupConstraints()
     }
     
@@ -116,10 +119,19 @@ internal class FamilyViewController: UIViewController {
     }
     
     private func bindUI() {
-        limitView.rx.tap.asDriver().drive(onNext: { [navigator] (_) in
-            navigator.toHahaPage()
-        })
-        .disposed(by: rx_disposeBag)
+        limitView.rx.tap
+            .asDriver()
+            .drive(onNext: { [navigator] (_) in
+                navigator.toHahaPage()
+            })
+            .disposed(by: rx_disposeBag)
+        
+        categorySubject
+            .asDriverOnErrorJustComplete()
+            .drive(onNext: { [navigator] (index) in
+                navigator.toCategoryPage(index: index)
+            })
+            .disposed(by: rx_disposeBag)
     }
 }
 
@@ -137,6 +149,11 @@ extension FamilyViewController: UITableViewDelegate {
         view.backgroundColor = .clear
         
         return view
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        categorySubject.onNext(indexPath.section + indexPath.row)
     }
 }
 

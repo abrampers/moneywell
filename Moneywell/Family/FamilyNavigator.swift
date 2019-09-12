@@ -12,6 +12,7 @@ import Shared
 internal protocol FamilyNavigator {
     func toBack()
     func toHahaPage()
+    func toCategoryPage(index: Int)
 }
 
 internal class DefaultFamilyNavigator: FamilyNavigator {
@@ -27,5 +28,9 @@ internal class DefaultFamilyNavigator: FamilyNavigator {
     
     internal func toHahaPage() {
         self.navigationController?.pushViewController(HahaViewController(), animated: true)
+    }
+    
+    internal func toCategoryPage(index: Int) {
+        self.navigationController?.pushViewController(CategoryViewController(index: index), animated: true)
     }
 }

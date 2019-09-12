@@ -12,22 +12,43 @@ import RxCocoa
 import SnapKit
 
 public class CategoryViewController: UIViewController {
-    private let categoryTableView: UITableView = {
-        let view = UITableView()
-        view.register(CategoryTableViewCell.self, forCellReuseIdentifier: CategoryTableViewCell.identifier)
+    private var category: Category
+    
+    private let scrollView: UIScrollView = {
+        let view = UIScrollView()
+        view.showsVerticalScrollIndicator = false
+        view.alwaysBounceVertical = true
         
-        let headerView = UILabel()
-        headerView.attributedText = NSAttributedString.text("Categories", size: 24, weight: .bold, color: .black)
+        return view
+    }()
+    
+    private let iconView = UIImageView()
+    private let titleLabel = UILabel()
+    private let transactionLabel = UILabel()
+    private let amountLabel = UILabel()
+    
+    private lazy var upperStack: UIStackView = {
+        let stack = UIStackView(arrangedSubviews: [self.iconView, self.titleLabel, self.transactionLabel, self.amountLabel])
+        stack.axis = .vertical
+        stack.alignment = .center
+        stack.spacing = 8
+        
+        return stack
+    }()
+    
+    private let tableView: UITableView = {
+        let view = UITableView()
+        view.register(TransactionTableViewCell.self, forCellReuseIdentifier: TransactionTableViewCell.identifier)
         
         view.backgroundColor = .clear
-        view.tableHeaderView = headerView
         view.separatorStyle = .none
         view.allowsSelection = false
         
         return view
     }()
     
-    public init() {
+    public init(index: Int) {
+        category = Category.shared[index]
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -37,50 +58,72 @@ public class CategoryViewController: UIViewController {
     
     public override func viewDidLoad() {
         super.viewDidLoad()
-
-        title = "Hello"
         view.backgroundColor = .n500
         
         setupUI()
     }
     
-    private func setupUI() {
-        categoryTableView.delegate = self
-        categoryTableView.dataSource = self
-        
-        view.addSubview(categoryTableView)
-        categoryTableView.snp.makeConstraints { (make) in
-            make.top.bottom.equalToSuperview()
-            make.left.equalToSuperview().offset(18)
-            make.right.equalToSuperview().offset(-18)
-        }
+    public override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        tableView.frame = CGRect(x: 18, y: upperStack.frame.maxY + 8, width: view.bounds.width - 36, height: tableView.contentSize.height)
+    }
+
+    override public func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+
+        tableView.frame = CGRect(x: 18, y: upperStack.frame.maxY + 8, width: view.bounds.width - 36, height: tableView.contentSize.height)
+
+        let contentHeight = upperStack.frame.maxY + 8 + tableView.contentSize.height + 8
+        scrollView.contentSize = CGSize(width: scrollView.frame.width, height: contentHeight)
     }
     
-    public override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
+    private func setupConstraints() {
+        view.addSubview(scrollView)
+        scrollView.snp.makeConstraints { (make) in
+            make.edges.equalToSuperview()
+        }
         
-        var frame = categoryTableView.tableHeaderView?.frame
-        frame?.size.height = 37
+        iconView.snp.makeConstraints { (make) in
+            make.height.width.equalTo(84)
+        }
         
-        categoryTableView.tableHeaderView?.frame = frame!
+        scrollView.addSubview(upperStack)
+        upperStack.snp.makeConstraints { (make) in
+            make.top.left.equalToSuperview().offset(16)
+            make.right.equalToSuperview().offset(-16)
+            make.centerX.equalToSuperview()
+        }
+        
+        scrollView.addSubview(tableView)
+    }
+    
+    private func setupUI() {
+        iconView.image = category.image
+        titleLabel.attributedText = .text(category.title, size: 30, weight: .bold, color: .black)
+        transactionLabel.attributedText = .text("\(category.numTransaction) Transactions", size: 16, weight: .book, color: .n100)
+        amountLabel.attributedText = .text(category.amount.currencyFormat, size: 40, weight: .bold, color: .black)
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        setupConstraints()
     }
 }
 
 extension CategoryViewController: UITableViewDataSource {
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: CategoryTableViewCell.identifier) as! CategoryTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: TransactionTableViewCell.identifier) as! TransactionTableViewCell
         
-        cell.configureCell(category: Category.shared[indexPath.section + indexPath.row])
+        cell.configureCell(transaction: category.transactions[indexPath.section + indexPath.row])
         cell.layer.cornerRadius = 10
         cell.clipsToBounds = true
-        
-        print("cell frame", cell.frame)
         
         return cell
     }
     
     public func numberOfSections(in tableView: UITableView) -> Int {
-        return Category.shared.count
+        return category.transactions.count
     }
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -238,6 +238,7 @@
 		21503B1D232A617A00761B71 /* Family */ = {
 			isa = PBXGroup;
 			children = (
+				216981FF23277CC0009455FF /* Cell */,
 				21503B22232A632100761B71 /* View */,
 				21503B1E232A61AB00761B71 /* FamilyViewController.swift */,
 				21503B27232AB58900761B71 /* FamilyNavigator.swift */,
@@ -276,7 +277,6 @@
 		216982042327CF1D009455FF /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				216981FF23277CC0009455FF /* Cell */,
 				21D603C42326545E00F075E8 /* CategoryViewController.swift */,
 			);
 			path = Category;
