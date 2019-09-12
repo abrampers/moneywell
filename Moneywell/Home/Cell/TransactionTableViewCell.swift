@@ -20,6 +20,26 @@ public class TransactionTableViewCell: UITableViewCell {
     private let timeLabel = UILabel()
     private let amountLabel = UILabel()
     
+    private lazy var middleStack: UIStackView = {
+        let stack = UIStackView(arrangedSubviews: [self.merchantLabel, self.locationLabel, self.timeLabel])
+        stack.axis = .vertical
+        stack.alignment = .leading
+        stack.distribution = .equalSpacing
+        stack.spacing = 1
+        stack.setContentHuggingPriority(.defaultLow, for: .horizontal)
+        
+        return stack
+    }()
+    
+    private lazy var stack: UIStackView = {
+        let stack = UIStackView(arrangedSubviews: [self.iconImage, self.middleStack, self.amountLabel])
+        stack.axis = .horizontal
+        stack.alignment = .center
+        stack.spacing = 12
+        
+        return stack
+    }()
+    
     public func configureCell(transaction: Transaction) {
         iconImage.image = transaction.image
         merchantLabel.attributedText = .text(transaction.merchant, size: 18, weight: .bold, color: .black)
@@ -40,38 +60,14 @@ public class TransactionTableViewCell: UITableViewCell {
             make.height.equalTo(82)
         }
         
-        contentView.addSubview(iconImage)
-        iconImage.snp.makeConstraints { (make) in
-            make.left.equalToSuperview().offset(12)
-            make.centerY.equalToSuperview()
-            make.height.width.equalTo(56)
+        contentView.addSubview(stack)
+        stack.snp.makeConstraints { (make) in
+            make.center.equalToSuperview()
+            make.width.equalToSuperview().offset(-24)
         }
         
-        contentView.addSubview(amountLabel)
-        amountLabel.snp.makeConstraints { (make) in
-            make.centerY.equalToSuperview()
-            make.right.equalToSuperview().offset(-12)
-        }
-        
-        contentView.addSubview(locationLabel)
-        locationLabel.snp.makeConstraints { (make) in
-            make.left.equalTo(iconImage.snp.right).offset(12)
-            make.centerY.equalToSuperview()
-            //            make.right.greaterThanOrEqualTo(amountLabel.snp.left).offset(-4)
-        }
-        
-        contentView.addSubview(merchantLabel)
-        merchantLabel.snp.makeConstraints { [locationLabel] (make) in
-            make.left.equalTo(locationLabel.snp.left)
-            make.bottom.equalTo(locationLabel.snp.top).offset(-1)
-            //            make.right.greaterThanOrEqualTo(amountLabel.snp.left).offset(-4)
-        }
-        
-        contentView.addSubview(timeLabel)
-        timeLabel.snp.makeConstraints { [locationLabel] (make) in
-            make.left.equalTo(locationLabel.snp.left)
-            make.top.equalTo(locationLabel.snp.bottom).offset(1)
-            //            make.right.greaterThanOrEqualTo(amountLabel.snp.left).offset(-4)
+        middleStack.snp.makeConstraints { (make) in
+            make.width.equalTo(150)
         }
     }
 }

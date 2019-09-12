@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Moneywell/Home/HomeViewController.swift"
-            timestampString = "589950601.47303"
+            timestampString = "589955014.869583"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "164"
-            endingLineNumber = "164"
+            startingLineNumber = "155"
+            endingLineNumber = "155"
             landmarkName = "setupUI()"
             landmarkType = "7">
          </BreakpointContent>
