@@ -15,7 +15,12 @@ public struct Transaction {
                     merchant: "Starbucks",
                     location: "Jakarta Selatan",
                     time: 2,
-                    amount: 40560)
+                    amount: 40560),
+        Transaction(image: UIImage(named: "mcd")!,
+                    merchant: "McDonald's",
+                    location: "Jakarta Pusat",
+                    time: 1,
+                    amount: 25000),
     ]
     
     public let image: UIImage

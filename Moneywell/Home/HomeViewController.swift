@@ -10,6 +10,7 @@ import RxCocoa
 import RxSwift
 import SnapKit
 import UIKit
+import Shared
 
 internal class HomeViewController: UIViewController {
     private let rx_disposeBag = DisposeBag()
@@ -38,6 +39,9 @@ internal class HomeViewController: UIViewController {
         let view = UIImageView(image: UIImage(named: "card"))
         view.isUserInteractionEnabled = true
         // Setup Shadow here
+        view.layer.shadowColor = UIColor.black.cgColor
+        view.layer.shadowOpacity = 0.4
+        view.layer.shadowRadius = 5
         
         return view
     }()
@@ -166,7 +170,7 @@ internal class HomeViewController: UIViewController {
         cardImage.snp.makeConstraints { [cardImage] (make) in
             make.width.lessThanOrEqualTo(360)
             make.height.equalTo(cardImage.snp.width).multipliedBy(214.52/340)
-            make.top.equalToSuperview().offset(8)
+            make.top.equalToSuperview().offset(18)
             make.left.equalToSuperview().offset(18)
             make.right.equalToSuperview().offset(-18)
             make.centerX.equalToSuperview()
@@ -232,9 +236,8 @@ internal class HomeViewController: UIViewController {
             barButton.rx.tap.asDriver()
         )
         
-        tap.drive(onNext: { [scrollView, navigator] _ in
+        tap.drive(onNext: { [navigator] _ in
             navigator.toHahaPage()
-            print("scrollview contentsize", scrollView.contentSize)
         })
         .disposed(by: rx_disposeBag)
     }
@@ -255,17 +258,13 @@ extension HomeViewController: UITableViewDelegate {
         
         return view
     }
-    
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        print("scrollview contentsize", scrollView.contentSize)
-    }
 }
 
 extension HomeViewController: UITableViewDataSource {
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: TransactionTableViewCell.identifier) as! TransactionTableViewCell
         
-        cell.configureCell(transaction: Transaction.shared[0])
+        cell.configureCell(transaction: Transaction.shared[indexPath.section + indexPath.row])
         cell.layer.cornerRadius = 10
         cell.clipsToBounds = true
         
@@ -273,7 +272,7 @@ extension HomeViewController: UITableViewDataSource {
     }
     
     public func numberOfSections(in tableView: UITableView) -> Int {
-        return 10
+        return Transaction.shared.count
     }
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

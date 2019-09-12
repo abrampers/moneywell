@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import SnapKit
 
-class HahaViewController: UIViewController {
-    override func viewDidLoad() {
+public class HahaViewController: UIViewController {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         
         title = "Haha"

@@ -10,3 +10,25 @@ target 'Moneywell' do
   pod 'RxCocoa', '~> 5.0'
   pod 'SnapKit', '~> 4.0'
 end
+
+target 'Shared' do
+  use_frameworks!
+  
+  # Rx Pod
+  pod 'RxSwift', '~> 5.0'
+  pod 'RxCocoa', '~> 5.0'
+  
+  # Snapkit Pod
+  pod 'SnapKit', '~> 4.0'
+end
+
+target 'MerchantNotification' do
+  use_frameworks!
+  
+  # Rx Pod
+  pod 'RxSwift', '~> 5.0'
+  pod 'RxCocoa', '~> 5.0'
+  
+  # Snapkit Pod
+  pod 'SnapKit', '~> 4.0'
+end

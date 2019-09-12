@@ -7,6 +7,16 @@
 //
 
 import UIKit
+import UserNotifications
+import Shared
+
+internal enum Identifiers {
+    internal static let viewAction = "VIEW_IDENTIFIER"
+    internal static let newsCategory = "NEWS_CATEGORY"
+    internal static let merchantSpendingCategory = "SPENDING_CATEGORY"
+    internal static let yesAction = "YES_IDENTIFIER"
+    internal static let noAction = "NO_IDENTIFIER"
+}
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -28,6 +38,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = tabBar
         window?.makeKeyAndVisible()
+        
+        // Push Notifications
+        registerForPushNotifications()
         
         return true
     }
@@ -53,7 +66,77 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+    
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        let tokenParts = deviceToken.map { data in String(format: "%02.2hhx", data) }
+        let token = tokenParts.joined()
+        print("Device Token: \(token)")
+    }
+    
+    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        print("Failed to register: \(error)")
+    }
+    
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        
+        guard let aps = userInfo["aps"] as? [String: AnyObject] else {
+            completionHandler(.failed)
+            return
+        }
+        
+        
+    }
+}
 
-
+// MARK: Push Notifications
+extension AppDelegate {
+    func registerForPushNotifications() {
+        UNUserNotificationCenter.current()
+            .requestAuthorization(options: [.alert, .sound]) { granted, error in
+                print("Permission granted: \(granted)")
+                guard granted else { return }
+                
+                // MARK: Add notif category
+                self.configureNotifCategory()
+                
+                self.getNotificationSettings()
+        }
+    }
+    
+    func getNotificationSettings() {
+        UNUserNotificationCenter.current().getNotificationSettings { settings in
+            print("Notification settings: \(settings)")
+            guard settings.authorizationStatus == .authorized else { return }
+            DispatchQueue.main.async {
+                UIApplication.shared.registerForRemoteNotifications()
+            }
+        }
+    }
+    
+    func configureNotifCategory() {
+        let viewAction = UNNotificationAction(
+            identifier: Identifiers.viewAction, title: "View",
+            options: [.foreground])
+        
+        let newsCategory = UNNotificationCategory(
+            identifier: Identifiers.newsCategory, actions: [viewAction],
+            intentIdentifiers: [], options: [])
+        
+        let yesAction = UNNotificationAction(identifier: Identifiers.yesAction,
+                                             title: "Yes, let’s record my spending!",
+                                             options: [.foreground])
+        
+        let noAction = UNNotificationAction(identifier: Identifiers.noAction,
+                                             title: "Nope, just passing by.",
+                                             options: [.foreground])
+        
+        let merchantSpendingCategory = UNNotificationCategory(identifier: Identifiers.merchantSpendingCategory,
+                                                              actions: [yesAction, noAction],
+                                                              intentIdentifiers: [],
+                                                              hiddenPreviewsBodyPlaceholder: "",
+                                                              options: [])
+        
+        UNUserNotificationCenter.current().setNotificationCategories([newsCategory, merchantSpendingCategory])
+    }
 }
 

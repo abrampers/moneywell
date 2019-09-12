@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Shared
 
 internal protocol HomeNavigator {
     func toBack()

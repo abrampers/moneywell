@@ -10,6 +10,7 @@ import UIKit
 import SnapKit
 import RxSwift
 import RxCocoa
+import Shared
 
 public class TransactionTableViewCell: UITableViewCell {
     public static var identifier = "TransactionTableViewCell"
@@ -67,7 +68,7 @@ public class TransactionTableViewCell: UITableViewCell {
         }
         
         middleStack.snp.makeConstraints { (make) in
-            make.width.equalTo(150)
+            make.width.equalTo(120)
         }
     }
 }

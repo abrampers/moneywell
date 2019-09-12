@@ -7,34 +7,89 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1064E2221E7B2F015839A527 /* Pods_Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 421F9200AF5752E616E98627 /* Pods_Shared.framework */; };
 		21503AD3232901AF00761B71 /* HomeNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21503ACF232901AF00761B71 /* HomeNavigator.swift */; };
 		21503AD4232901AF00761B71 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21503AD0232901AF00761B71 /* HomeViewController.swift */; };
-		21503AD82329104500761B71 /* Observable+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21503AD72329104500761B71 /* Observable+Extensions.swift */; };
-		21503ADA2329119300761B71 /* HahaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21503AD92329119300761B71 /* HahaViewController.swift */; };
 		21503ADD2329274400761B71 /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21503ADC2329274400761B71 /* TransactionTableViewCell.swift */; };
 		21503ADF2329280A00761B71 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21503ADE2329280A00761B71 /* Transaction.swift */; };
-		21503AE12329396500761B71 /* DefaultNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21503AE02329396500761B71 /* DefaultNavigationController.swift */; };
 		21503AE42329E4D700761B71 /* BalanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21503AE32329E4D700761B71 /* BalanceView.swift */; };
 		21503AE62329E54200761B71 /* Balance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21503AE52329E54200761B71 /* Balance.swift */; };
+		21503AEE232A1B6200761B71 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21503AED232A1B6200761B71 /* UserNotifications.framework */; };
+		21503AF0232A1B6200761B71 /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21503AEF232A1B6200761B71 /* UserNotificationsUI.framework */; };
+		21503AF3232A1B6200761B71 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21503AF2232A1B6200761B71 /* NotificationViewController.swift */; };
+		21503AF6232A1B6200761B71 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21503AF4232A1B6200761B71 /* MainInterface.storyboard */; };
+		21503AFA232A1B6200761B71 /* MerchantNotification.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 21503AEC232A1B6200761B71 /* MerchantNotification.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		21503B08232A4E4000761B71 /* Shared.h in Headers */ = {isa = PBXBuildFile; fileRef = 21503B06232A4E4000761B71 /* Shared.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		21503B0B232A4E4000761B71 /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21503B04232A4E4000761B71 /* Shared.framework */; };
+		21503B0C232A4E4000761B71 /* Shared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 21503B04232A4E4000761B71 /* Shared.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		21503B13232A4F6900761B71 /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21503B04232A4E4000761B71 /* Shared.framework */; };
+		21503B14232A514400761B71 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D603DA23265D9800F075E8 /* ViewModelType.swift */; };
+		21503B15232A514A00761B71 /* HahaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21503AD92329119300761B71 /* HahaViewController.swift */; };
+		21503B16232A514A00761B71 /* DefaultNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21503AE02329396500761B71 /* DefaultNavigationController.swift */; };
+		21503B17232A514F00761B71 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D603C7232654A900F075E8 /* UIColor.swift */; };
+		21503B18232A514F00761B71 /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D603C9232654B900F075E8 /* Typography.swift */; };
+		21503B19232A514F00761B71 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21698202232788D5009455FF /* Int+Extension.swift */; };
+		21503B1A232A514F00761B71 /* Observable+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21503AD72329104500761B71 /* Observable+Extensions.swift */; };
+		21503B1C232A5A5D00761B71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21503B1B232A5A5D00761B71 /* Assets.xcassets */; };
 		216981FE232779A7009455FF /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216981FD232779A7009455FF /* Category.swift */; };
 		2169820123277D7D009455FF /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2169820023277D7D009455FF /* CategoryTableViewCell.swift */; };
-		21698203232788D5009455FF /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21698202232788D5009455FF /* Int+Extension.swift */; };
 		21D603B32326529900F075E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D603B22326529900F075E8 /* AppDelegate.swift */; };
 		21D603BA2326529B00F075E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21D603B92326529B00F075E8 /* Assets.xcassets */; };
 		21D603BD2326529B00F075E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21D603BB2326529B00F075E8 /* LaunchScreen.storyboard */; };
 		21D603C52326545E00F075E8 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D603C42326545E00F075E8 /* CategoryViewController.swift */; };
-		21D603C8232654A900F075E8 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D603C7232654A900F075E8 /* UIColor.swift */; };
-		21D603CA232654B900F075E8 /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D603C9232654B900F075E8 /* Typography.swift */; };
 		21D603D12326563000F075E8 /* AirbnbCereal-Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 21D603CC2326563000F075E8 /* AirbnbCereal-Book.ttf */; };
 		21D603D22326563000F075E8 /* AirbnbCereal-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 21D603CD2326563000F075E8 /* AirbnbCereal-ExtraBold.ttf */; };
 		21D603D32326563000F075E8 /* AirbnbCereal-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 21D603CE2326563000F075E8 /* AirbnbCereal-Bold.ttf */; };
 		21D603D42326563000F075E8 /* AirbnbCereal-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 21D603CF2326563000F075E8 /* AirbnbCereal-Medium.ttf */; };
 		21D603D52326563000F075E8 /* AirbnbCereal-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 21D603D02326563000F075E8 /* AirbnbCereal-Light.ttf */; };
-		21D603DB23265D9800F075E8 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D603DA23265D9800F075E8 /* ViewModelType.swift */; };
 		7FB1AD37DF5097BCD2D2742C /* Pods_Moneywell.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68417F12D62562F4F3525DCE /* Pods_Moneywell.framework */; };
+		8FE820DCB0BC5F8922875FF4 /* Pods_MerchantNotification.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE5A1384420F5B498F78CB6C /* Pods_MerchantNotification.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		21503AF8232A1B6200761B71 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 21D603A72326529900F075E8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 21503AEB232A1B6200761B71;
+			remoteInfo = MerchantNotification;
+		};
+		21503B09232A4E4000761B71 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 21D603A72326529900F075E8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 21503B03232A4E4000761B71;
+			remoteInfo = Shared;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		21503AFE232A1B6200761B71 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				21503AFA232A1B6200761B71 /* MerchantNotification.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		21503B10232A4E4100761B71 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				21503B0C232A4E4000761B71 /* Shared.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		0776F51C8F86268EA49D6D69 /* Pods-Shared.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shared.release.xcconfig"; path = "Target Support Files/Pods-Shared/Pods-Shared.release.xcconfig"; sourceTree = "<group>"; };
 		1DD23306FEA1F6FDBEC8A15E /* Pods-Moneywell.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moneywell.release.xcconfig"; path = "Target Support Files/Pods-Moneywell/Pods-Moneywell.release.xcconfig"; sourceTree = "<group>"; };
 		21503ACF232901AF00761B71 /* HomeNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavigator.swift; sourceTree = "<group>"; };
 		21503AD0232901AF00761B71 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -45,6 +100,17 @@
 		21503AE02329396500761B71 /* DefaultNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultNavigationController.swift; sourceTree = "<group>"; };
 		21503AE32329E4D700761B71 /* BalanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceView.swift; sourceTree = "<group>"; };
 		21503AE52329E54200761B71 /* Balance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Balance.swift; sourceTree = "<group>"; };
+		21503AE7232A058E00761B71 /* Moneywell.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Moneywell.entitlements; sourceTree = "<group>"; };
+		21503AEC232A1B6200761B71 /* MerchantNotification.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MerchantNotification.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		21503AED232A1B6200761B71 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		21503AEF232A1B6200761B71 /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = SDKROOT; };
+		21503AF2232A1B6200761B71 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		21503AF5232A1B6200761B71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		21503AF7232A1B6200761B71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		21503B04232A4E4000761B71 /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		21503B06232A4E4000761B71 /* Shared.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Shared.h; sourceTree = "<group>"; };
+		21503B07232A4E4000761B71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		21503B1B232A5A5D00761B71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		216981FD232779A7009455FF /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		2169820023277D7D009455FF /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 		21698202232788D5009455FF /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
@@ -62,16 +128,41 @@
 		21D603CF2326563000F075E8 /* AirbnbCereal-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AirbnbCereal-Medium.ttf"; sourceTree = "<group>"; };
 		21D603D02326563000F075E8 /* AirbnbCereal-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AirbnbCereal-Light.ttf"; sourceTree = "<group>"; };
 		21D603DA23265D9800F075E8 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
+		3DA74609993405E0C92F343D /* Pods-MerchantNotification.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MerchantNotification.release.xcconfig"; path = "Target Support Files/Pods-MerchantNotification/Pods-MerchantNotification.release.xcconfig"; sourceTree = "<group>"; };
+		421F9200AF5752E616E98627 /* Pods_Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		68417F12D62562F4F3525DCE /* Pods_Moneywell.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Moneywell.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		79BE63609A95D35650EB2953 /* Pods-MerchantNotification.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MerchantNotification.debug.xcconfig"; path = "Target Support Files/Pods-MerchantNotification/Pods-MerchantNotification.debug.xcconfig"; sourceTree = "<group>"; };
+		DD87D54BE44A4CD5D0A18DE0 /* Pods-Shared.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shared.debug.xcconfig"; path = "Target Support Files/Pods-Shared/Pods-Shared.debug.xcconfig"; sourceTree = "<group>"; };
 		E4EB5C09788DE7B3102C3352 /* Pods-Moneywell.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moneywell.debug.xcconfig"; path = "Target Support Files/Pods-Moneywell/Pods-Moneywell.debug.xcconfig"; sourceTree = "<group>"; };
+		EE5A1384420F5B498F78CB6C /* Pods_MerchantNotification.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MerchantNotification.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		21503AE9232A1B6200761B71 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21503B13232A4F6900761B71 /* Shared.framework in Frameworks */,
+				21503AF0232A1B6200761B71 /* UserNotificationsUI.framework in Frameworks */,
+				21503AEE232A1B6200761B71 /* UserNotifications.framework in Frameworks */,
+				8FE820DCB0BC5F8922875FF4 /* Pods_MerchantNotification.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		21503B01232A4E4000761B71 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1064E2221E7B2F015839A527 /* Pods_Shared.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		21D603AC2326529900F075E8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				7FB1AD37DF5097BCD2D2742C /* Pods_Moneywell.framework in Frameworks */,
+				21503B0B232A4E4000761B71 /* Shared.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +183,46 @@
 				21503AE32329E4D700761B71 /* BalanceView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		21503AF1232A1B6200761B71 /* MerchantNotification */ = {
+			isa = PBXGroup;
+			children = (
+				21503AF2232A1B6200761B71 /* NotificationViewController.swift */,
+				21503AF4232A1B6200761B71 /* MainInterface.storyboard */,
+				21503AF7232A1B6200761B71 /* Info.plist */,
+				21503B1B232A5A5D00761B71 /* Assets.xcassets */,
+			);
+			path = MerchantNotification;
+			sourceTree = "<group>";
+		};
+		21503B05232A4E4000761B71 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				21503B12232A4EA600761B71 /* ViewModel */,
+				21503B11232A4E8600761B71 /* View */,
+				21D603C62326548C00F075E8 /* Extensions */,
+				21503B06232A4E4000761B71 /* Shared.h */,
+				21503B07232A4E4000761B71 /* Info.plist */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		21503B11232A4E8600761B71 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				21503AD92329119300761B71 /* HahaViewController.swift */,
+				21503AE02329396500761B71 /* DefaultNavigationController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		21503B12232A4EA600761B71 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				21D603DA23265D9800F075E8 /* ViewModelType.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		216981FC23277919009455FF /* Model */ = {
@@ -125,6 +256,8 @@
 			isa = PBXGroup;
 			children = (
 				21D603B12326529900F075E8 /* Moneywell */,
+				21503AF1232A1B6200761B71 /* MerchantNotification */,
+				21503B05232A4E4000761B71 /* Shared */,
 				21D603B02326529900F075E8 /* Products */,
 				C44D53B5D7558245135257B2 /* Pods */,
 				5E9B8561958F6B01243FE660 /* Frameworks */,
@@ -135,6 +268,8 @@
 			isa = PBXGroup;
 			children = (
 				21D603AF2326529900F075E8 /* Moneywell.app */,
+				21503AEC232A1B6200761B71 /* MerchantNotification.appex */,
+				21503B04232A4E4000761B71 /* Shared.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -142,12 +277,11 @@
 		21D603B12326529900F075E8 /* Moneywell */ = {
 			isa = PBXGroup;
 			children = (
+				21503AE7232A058E00761B71 /* Moneywell.entitlements */,
 				216982042327CF1D009455FF /* Category */,
 				216981FC23277919009455FF /* Model */,
-				21D603D923265D8900F075E8 /* Shared */,
 				21D603D623265CE700F075E8 /* Home */,
 				21D603CB232655EC00F075E8 /* Resources */,
-				21D603C62326548C00F075E8 /* Extensions */,
 				21D603B22326529900F075E8 /* AppDelegate.swift */,
 				21D603B92326529B00F075E8 /* Assets.xcassets */,
 				21D603BB2326529B00F075E8 /* LaunchScreen.storyboard */,
@@ -190,20 +324,14 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		21D603D923265D8900F075E8 /* Shared */ = {
-			isa = PBXGroup;
-			children = (
-				21D603DA23265D9800F075E8 /* ViewModelType.swift */,
-				21503AD92329119300761B71 /* HahaViewController.swift */,
-				21503AE02329396500761B71 /* DefaultNavigationController.swift */,
-			);
-			path = Shared;
-			sourceTree = "<group>";
-		};
 		5E9B8561958F6B01243FE660 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				68417F12D62562F4F3525DCE /* Pods_Moneywell.framework */,
+				21503AED232A1B6200761B71 /* UserNotifications.framework */,
+				21503AEF232A1B6200761B71 /* UserNotificationsUI.framework */,
+				421F9200AF5752E616E98627 /* Pods_Shared.framework */,
+				EE5A1384420F5B498F78CB6C /* Pods_MerchantNotification.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -213,13 +341,65 @@
 			children = (
 				E4EB5C09788DE7B3102C3352 /* Pods-Moneywell.debug.xcconfig */,
 				1DD23306FEA1F6FDBEC8A15E /* Pods-Moneywell.release.xcconfig */,
+				DD87D54BE44A4CD5D0A18DE0 /* Pods-Shared.debug.xcconfig */,
+				0776F51C8F86268EA49D6D69 /* Pods-Shared.release.xcconfig */,
+				79BE63609A95D35650EB2953 /* Pods-MerchantNotification.debug.xcconfig */,
+				3DA74609993405E0C92F343D /* Pods-MerchantNotification.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		21503AFF232A4E4000761B71 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21503B08232A4E4000761B71 /* Shared.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		21503AEB232A1B6200761B71 /* MerchantNotification */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 21503AFB232A1B6200761B71 /* Build configuration list for PBXNativeTarget "MerchantNotification" */;
+			buildPhases = (
+				A3E3526E70DE423FF4D26BFD /* [CP] Check Pods Manifest.lock */,
+				21503AE8232A1B6200761B71 /* Sources */,
+				21503AE9232A1B6200761B71 /* Frameworks */,
+				21503AEA232A1B6200761B71 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MerchantNotification;
+			productName = MerchantNotification;
+			productReference = 21503AEC232A1B6200761B71 /* MerchantNotification.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		21503B03232A4E4000761B71 /* Shared */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 21503B0D232A4E4100761B71 /* Build configuration list for PBXNativeTarget "Shared" */;
+			buildPhases = (
+				57F7FA176C394F9C01F27FCA /* [CP] Check Pods Manifest.lock */,
+				21503AFF232A4E4000761B71 /* Headers */,
+				21503B00232A4E4000761B71 /* Sources */,
+				21503B01232A4E4000761B71 /* Frameworks */,
+				21503B02232A4E4000761B71 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Shared;
+			productName = Shared;
+			productReference = 21503B04232A4E4000761B71 /* Shared.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		21D603AE2326529900F075E8 /* Moneywell */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 21D603C12326529B00F075E8 /* Build configuration list for PBXNativeTarget "Moneywell" */;
@@ -229,10 +409,14 @@
 				21D603AC2326529900F075E8 /* Frameworks */,
 				21D603AD2326529900F075E8 /* Resources */,
 				E63CD2B77A1C323017AF7B64 /* [CP] Embed Pods Frameworks */,
+				21503AFE232A1B6200761B71 /* Embed App Extensions */,
+				21503B10232A4E4100761B71 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				21503AF9232A1B6200761B71 /* PBXTargetDependency */,
+				21503B0A232A4E4000761B71 /* PBXTargetDependency */,
 			);
 			name = Moneywell;
 			productName = Moneywell;
@@ -249,8 +433,19 @@
 				LastUpgradeCheck = 1030;
 				ORGANIZATIONNAME = "Abram Situmorang";
 				TargetAttributes = {
+					21503AEB232A1B6200761B71 = {
+						CreatedOnToolsVersion = 10.3;
+					};
+					21503B03232A4E4000761B71 = {
+						CreatedOnToolsVersion = 10.3;
+					};
 					21D603AE2326529900F075E8 = {
 						CreatedOnToolsVersion = 10.3;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -268,11 +463,29 @@
 			projectRoot = "";
 			targets = (
 				21D603AE2326529900F075E8 /* Moneywell */,
+				21503AEB232A1B6200761B71 /* MerchantNotification */,
+				21503B03232A4E4000761B71 /* Shared */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		21503AEA232A1B6200761B71 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21503B1C232A5A5D00761B71 /* Assets.xcassets in Resources */,
+				21503AF6232A1B6200761B71 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		21503B02232A4E4000761B71 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		21D603AD2326529900F075E8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -290,6 +503,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		57F7FA176C394F9C01F27FCA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Shared-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		5A05400FC10D5E7B4F03E960 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -306,6 +541,28 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-Moneywell-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A3E3526E70DE423FF4D26BFD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MerchantNotification-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -332,33 +589,69 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		21503AE8232A1B6200761B71 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21503AF3232A1B6200761B71 /* NotificationViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		21503B00232A4E4000761B71 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21503B18232A514F00761B71 /* Typography.swift in Sources */,
+				21503B15232A514A00761B71 /* HahaViewController.swift in Sources */,
+				21503B17232A514F00761B71 /* UIColor.swift in Sources */,
+				21503B19232A514F00761B71 /* Int+Extension.swift in Sources */,
+				21503B1A232A514F00761B71 /* Observable+Extensions.swift in Sources */,
+				21503B16232A514A00761B71 /* DefaultNavigationController.swift in Sources */,
+				21503B14232A514400761B71 /* ViewModelType.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		21D603AB2326529900F075E8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				21503ADF2329280A00761B71 /* Transaction.swift in Sources */,
-				21503AE12329396500761B71 /* DefaultNavigationController.swift in Sources */,
-				21503ADA2329119300761B71 /* HahaViewController.swift in Sources */,
 				21D603B32326529900F075E8 /* AppDelegate.swift in Sources */,
-				21D603C8232654A900F075E8 /* UIColor.swift in Sources */,
 				216981FE232779A7009455FF /* Category.swift in Sources */,
-				21698203232788D5009455FF /* Int+Extension.swift in Sources */,
 				21503AD3232901AF00761B71 /* HomeNavigator.swift in Sources */,
 				21503ADD2329274400761B71 /* TransactionTableViewCell.swift in Sources */,
 				21503AD4232901AF00761B71 /* HomeViewController.swift in Sources */,
-				21D603DB23265D9800F075E8 /* ViewModelType.swift in Sources */,
 				21503AE62329E54200761B71 /* Balance.swift in Sources */,
-				21D603CA232654B900F075E8 /* Typography.swift in Sources */,
 				21D603C52326545E00F075E8 /* CategoryViewController.swift in Sources */,
 				21503AE42329E4D700761B71 /* BalanceView.swift in Sources */,
-				21503AD82329104500761B71 /* Observable+Extensions.swift in Sources */,
 				2169820123277D7D009455FF /* CategoryTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		21503AF9232A1B6200761B71 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 21503AEB232A1B6200761B71 /* MerchantNotification */;
+			targetProxy = 21503AF8232A1B6200761B71 /* PBXContainerItemProxy */;
+		};
+		21503B0A232A4E4000761B71 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 21503B03232A4E4000761B71 /* Shared */;
+			targetProxy = 21503B09232A4E4000761B71 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		21503AF4232A1B6200761B71 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				21503AF5232A1B6200761B71 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		21D603BB2326529B00F075E8 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -370,6 +663,104 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		21503AFC232A1B6200761B71 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79BE63609A95D35650EB2953 /* Pods-MerchantNotification.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H8S6N7BJTQ;
+				INFOPLIST_FILE = MerchantNotification/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.abrampers.Moneywell.MerchantNotification;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		21503AFD232A1B6200761B71 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3DA74609993405E0C92F343D /* Pods-MerchantNotification.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H8S6N7BJTQ;
+				INFOPLIST_FILE = MerchantNotification/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.abrampers.Moneywell.MerchantNotification;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		21503B0E232A4E4100761B71 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD87D54BE44A4CD5D0A18DE0 /* Pods-Shared.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = H8S6N7BJTQ;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Shared/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = abrampers.Shared;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		21503B0F232A4E4100761B71 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0776F51C8F86268EA49D6D69 /* Pods-Shared.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = H8S6N7BJTQ;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Shared/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = abrampers.Shared;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		21D603BF2326529B00F075E8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -490,7 +881,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E4EB5C09788DE7B3102C3352 /* Pods-Moneywell.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Moneywell/Moneywell.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H8S6N7BJTQ;
 				INFOPLIST_FILE = Moneywell/Info.plist;
@@ -498,7 +891,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = abrampers.Moneywell;
+				PRODUCT_BUNDLE_IDENTIFIER = com.abrampers.Moneywell;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -509,7 +902,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1DD23306FEA1F6FDBEC8A15E /* Pods-Moneywell.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Moneywell/Moneywell.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H8S6N7BJTQ;
 				INFOPLIST_FILE = Moneywell/Info.plist;
@@ -517,7 +912,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = abrampers.Moneywell;
+				PRODUCT_BUNDLE_IDENTIFIER = com.abrampers.Moneywell;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -527,6 +922,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		21503AFB232A1B6200761B71 /* Build configuration list for PBXNativeTarget "MerchantNotification" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				21503AFC232A1B6200761B71 /* Debug */,
+				21503AFD232A1B6200761B71 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		21503B0D232A4E4100761B71 /* Build configuration list for PBXNativeTarget "Shared" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				21503B0E232A4E4100761B71 /* Debug */,
+				21503B0F232A4E4100761B71 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		21D603AA2326529900F075E8 /* Build configuration list for PBXProject "Moneywell" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
