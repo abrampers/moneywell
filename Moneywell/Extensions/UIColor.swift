@@ -13,6 +13,10 @@ extension UIColor {
         return #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
     }
     
+    public static var n50: UIColor {
+        return #colorLiteral(red: 0.3333333333, green: 0.3333333333, blue: 0.3333333333, alpha: 1)
+    }
+    
     public static var n100: UIColor {
         return #colorLiteral(red: 0.5058823529, green: 0.5058823529, blue: 0.5058823529, alpha: 1)
     }

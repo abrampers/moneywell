@@ -15,9 +15,6 @@ class DefaultNavigationController: UINavigationController {
 
         // Do any additional setup after loading the view.
         navigationBar.isTranslucent = false
-        navigationBar.backgroundColor = .n500
         navigationBar.prefersLargeTitles = true
-        //        navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-        //        navigationBar.shadowImage = UIImage()
     }
 }

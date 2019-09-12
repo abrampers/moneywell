@@ -36,19 +36,13 @@ internal class HomeViewController: UIViewController {
     
     private let cardImage: UIImageView = {
         let view = UIImageView(image: UIImage(named: "card"))
+        view.isUserInteractionEnabled = true
         // Setup Shadow here
         
         return view
     }()
     
-    private let balanceView: UIView = {
-        let view = UIView()
-        view.backgroundColor = .white
-        view.layer.cornerRadius = 10
-        view.clipsToBounds = true
-        
-        return view
-    }()
+    private let balanceView = BalanceView(balance: Balance(amount: 26539, delta: 23))
     
     private let button1: UIButton = {
         let button = UIButton()
@@ -180,7 +174,6 @@ internal class HomeViewController: UIViewController {
         
         scrollView.addSubview(balanceView)
         balanceView.snp.makeConstraints { [cardImage] (make) in
-            make.height.equalTo(84)
             make.left.equalToSuperview().offset(18)
             make.right.equalToSuperview().offset(-18)
             make.top.equalTo(cardImage.snp.bottom).offset(16)
@@ -239,9 +232,9 @@ internal class HomeViewController: UIViewController {
             barButton.rx.tap.asDriver()
         )
         
-        tap.drive(onNext: { [weak self, navigator] _ in
-            print("tableview frame", self?.tableView.frame)
+        tap.drive(onNext: { [scrollView, navigator] _ in
             navigator.toHahaPage()
+            print("scrollview contentsize", scrollView.contentSize)
         })
         .disposed(by: rx_disposeBag)
     }
@@ -261,6 +254,10 @@ extension HomeViewController: UITableViewDelegate {
         view.backgroundColor = .clear
         
         return view
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        print("scrollview contentsize", scrollView.contentSize)
     }
 }
 

@@ -16,6 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        UINavigationBar.appearance().tintColor = .black
+        UINavigationBar.appearance().backgroundColor = .n500
+        
         let tabBar = UITabBarController()
         
         let homeNavCon = DefaultNavigationController(rootViewController: HomeViewController())

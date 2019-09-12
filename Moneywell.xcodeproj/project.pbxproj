@@ -14,6 +14,8 @@
 		21503ADD2329274400761B71 /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21503ADC2329274400761B71 /* TransactionTableViewCell.swift */; };
 		21503ADF2329280A00761B71 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21503ADE2329280A00761B71 /* Transaction.swift */; };
 		21503AE12329396500761B71 /* DefaultNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21503AE02329396500761B71 /* DefaultNavigationController.swift */; };
+		21503AE42329E4D700761B71 /* BalanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21503AE32329E4D700761B71 /* BalanceView.swift */; };
+		21503AE62329E54200761B71 /* Balance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21503AE52329E54200761B71 /* Balance.swift */; };
 		216981FE232779A7009455FF /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216981FD232779A7009455FF /* Category.swift */; };
 		2169820123277D7D009455FF /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2169820023277D7D009455FF /* CategoryTableViewCell.swift */; };
 		21698203232788D5009455FF /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21698202232788D5009455FF /* Int+Extension.swift */; };
@@ -41,6 +43,8 @@
 		21503ADC2329274400761B71 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
 		21503ADE2329280A00761B71 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		21503AE02329396500761B71 /* DefaultNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultNavigationController.swift; sourceTree = "<group>"; };
+		21503AE32329E4D700761B71 /* BalanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceView.swift; sourceTree = "<group>"; };
+		21503AE52329E54200761B71 /* Balance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Balance.swift; sourceTree = "<group>"; };
 		216981FD232779A7009455FF /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		2169820023277D7D009455FF /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 		21698202232788D5009455FF /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
@@ -82,11 +86,20 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		21503AE22329E4BB00761B71 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				21503AE32329E4D700761B71 /* BalanceView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		216981FC23277919009455FF /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				216981FD232779A7009455FF /* Category.swift */,
 				21503ADE2329280A00761B71 /* Transaction.swift */,
+				21503AE52329E54200761B71 /* Balance.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -169,6 +182,7 @@
 		21D603D623265CE700F075E8 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				21503AE22329E4BB00761B71 /* View */,
 				21503ADB2329272100761B71 /* Cell */,
 				21503ACF232901AF00761B71 /* HomeNavigator.swift */,
 				21503AD0232901AF00761B71 /* HomeViewController.swift */,
@@ -333,8 +347,10 @@
 				21503ADD2329274400761B71 /* TransactionTableViewCell.swift in Sources */,
 				21503AD4232901AF00761B71 /* HomeViewController.swift in Sources */,
 				21D603DB23265D9800F075E8 /* ViewModelType.swift in Sources */,
+				21503AE62329E54200761B71 /* Balance.swift in Sources */,
 				21D603CA232654B900F075E8 /* Typography.swift in Sources */,
 				21D603C52326545E00F075E8 /* CategoryViewController.swift in Sources */,
+				21503AE42329E4D700761B71 /* BalanceView.swift in Sources */,
 				21503AD82329104500761B71 /* Observable+Extensions.swift in Sources */,
 				2169820123277D7D009455FF /* CategoryTableViewCell.swift in Sources */,
 			);
