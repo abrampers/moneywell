@@ -48,36 +48,36 @@ internal class HomeViewController: UIViewController {
     
     private let balanceView = BalanceView(balance: Balance(amount: 26539, delta: 23))
     
-    private let button1: UIButton = {
+    private let billButton: UIButton = {
         let button = UIButton()
-        button.backgroundColor = .white
+        button.setBackgroundImage(UIImage(named: "bill"), for: .normal)
         button.layer.cornerRadius = 10
         button.clipsToBounds = true
         
         return button
     }()
     
-    private let button2: UIButton = {
+    private let paymentButton: UIButton = {
         let button = UIButton()
-        button.backgroundColor = .white
+        button.setBackgroundImage(UIImage(named: "payment"), for: .normal)
         button.layer.cornerRadius = 10
         button.clipsToBounds = true
         
         return button
     }()
     
-    private let button3: UIButton = {
+    private let transferButton: UIButton = {
         let button = UIButton()
-        button.backgroundColor = .white
+        button.setBackgroundImage(UIImage(named: "transfer"), for: .normal)
         button.layer.cornerRadius = 10
         button.clipsToBounds = true
         
         return button
     }()
     
-    private let button4: UIButton = {
+    private let cardsButton: UIButton = {
         let button = UIButton()
-        button.backgroundColor = .white
+        button.setBackgroundImage(UIImage(named: "cards"), for: .normal)
         button.layer.cornerRadius = 10
         button.clipsToBounds = true
         
@@ -85,7 +85,7 @@ internal class HomeViewController: UIViewController {
     }()
     
     private lazy var buttonStack: UIStackView = {
-        let stack = UIStackView(arrangedSubviews: [self.button1, self.button2, self.button3, self.button4])
+        let stack = UIStackView(arrangedSubviews: [self.billButton, self.paymentButton, self.transferButton, self.cardsButton])
         stack.axis = .horizontal
         stack.alignment = .center
         stack.spacing = 9
@@ -136,7 +136,6 @@ internal class HomeViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-//        tableView.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 100)
         tableView.frame = CGRect(x: 18, y: buttonStack.frame.maxY + 8, width: view.bounds.width - 36, height: tableView.contentSize.height)
     }
     
@@ -145,7 +144,7 @@ internal class HomeViewController: UIViewController {
         
         tableView.frame = CGRect(x: 18, y: buttonStack.frame.maxY + 8, width: view.bounds.width - 36, height: tableView.contentSize.height)
         
-        let contentHeight = buttonStack.frame.maxY + 16 + tableView.contentSize.height
+        let contentHeight = buttonStack.frame.maxY + 8 + tableView.contentSize.height + 8
         scrollView.contentSize = CGSize(width: scrollView.frame.width, height: contentHeight)
     }
     
@@ -183,24 +182,24 @@ internal class HomeViewController: UIViewController {
             make.top.equalTo(cardImage.snp.bottom).offset(16)
         }
         
-        button1.snp.makeConstraints { [button1] (make) in
+        billButton.snp.makeConstraints { [billButton] (make) in
             make.height.lessThanOrEqualTo(90)
-            make.width.equalTo(button1.snp.height)
+            make.width.equalTo(billButton.snp.height)
         }
         
-        button2.snp.makeConstraints { [button2] (make) in
+        paymentButton.snp.makeConstraints { [paymentButton] (make) in
             make.height.lessThanOrEqualTo(90)
-            make.width.equalTo(button2.snp.height)
+            make.width.equalTo(paymentButton.snp.height)
         }
         
-        button3.snp.makeConstraints { [button3] (make) in
+        transferButton.snp.makeConstraints { [transferButton] (make) in
             make.height.lessThanOrEqualTo(90)
-            make.width.equalTo(button3.snp.height)
+            make.width.equalTo(transferButton.snp.height)
         }
         
-        button4.snp.makeConstraints { [button4] (make) in
+        cardsButton.snp.makeConstraints { [cardsButton] (make) in
             make.height.lessThanOrEqualTo(90)
-            make.width.equalTo(button4.snp.height)
+            make.width.equalTo(cardsButton.snp.height)
         }
         
         scrollView.addSubview(buttonStack)
@@ -212,7 +211,6 @@ internal class HomeViewController: UIViewController {
         }
         
         scrollView.addSubview(tableView)
-//        tableView.frame = CGRect(x: 18, y: buttonStack.frame.maxY, width: view.bounds.width - 36, height: tableView.contentSize.height)
     }
     
     private func bindUI() {
@@ -229,10 +227,10 @@ internal class HomeViewController: UIViewController {
         let tap = Driver.merge(
             cardTapTrigger,
             balanceTapTrigger,
-            button1.rx.tap.asDriver(),
-            button2.rx.tap.asDriver(),
-            button3.rx.tap.asDriver(),
-            button4.rx.tap.asDriver(),
+            billButton.rx.tap.asDriver(),
+            paymentButton.rx.tap.asDriver(),
+            transferButton.rx.tap.asDriver(),
+            cardsButton.rx.tap.asDriver(),
             barButton.rx.tap.asDriver()
         )
         

@@ -32,8 +32,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let tabBar = UITabBarController()
         
         let homeNavCon = DefaultNavigationController(rootViewController: HomeViewController())
-        let categoryNavCon = DefaultNavigationController(rootViewController: CategoryViewController())
-        tabBar.viewControllers = [homeNavCon, categoryNavCon]
+        let familyNavCon = DefaultNavigationController(rootViewController: FamilyViewController())
+        tabBar.viewControllers = [homeNavCon, familyNavCon]
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = tabBar

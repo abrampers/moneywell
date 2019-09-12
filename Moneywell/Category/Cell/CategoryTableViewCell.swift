@@ -14,33 +14,30 @@ import RxCocoa
 public class CategoryTableViewCell: UITableViewCell {
     public static var identifier = "CategoryTableViewCell"
     
-//    private let containerView: UIView = {
-//        let view = UIView()
-//        view.backgroundColor = .white
-//        view.layer.cornerRadius = 10
-//        view.clipsToBounds = true
-//
-//        return view
-//    }()
-    
-//    override public var frame: CGRect {
-//        get {
-//            return super.frame
-//        }
-//        set (newFrame) {
-//            let inset: CGFloat = 16
-//            var frame = newFrame
-//            frame.origin.x += inset
-//            frame.size.width -= 2 * inset
-//            super.frame = frame
-//            layoutIfNeeded()
-//        }
-//    }
-    
     private let iconImage = UIImageView()
     private let titleLabel = UILabel()
     private let transactionLabel = UILabel()
     private let amountLabel = UILabel()
+    
+    private lazy var middleStack: UIStackView = {
+        let stack = UIStackView(arrangedSubviews: [self.titleLabel, self.transactionLabel])
+        stack.axis = .vertical
+        stack.alignment = .leading
+        stack.distribution = .equalSpacing
+        stack.spacing = 1
+        stack.setContentHuggingPriority(.defaultLow, for: .horizontal)
+        
+        return stack
+    }()
+    
+    private lazy var stack: UIStackView = {
+        let stack = UIStackView(arrangedSubviews: [self.iconImage, self.middleStack, self.amountLabel])
+        stack.axis = .horizontal
+        stack.alignment = .center
+        stack.spacing = 12
+        
+        return stack
+    }()
     
     public func configureCell(category: Category) {
         iconImage.image = category.image
@@ -60,44 +57,16 @@ public class CategoryTableViewCell: UITableViewCell {
             make.height.equalTo(82)
         }
         
-//        contentView.addSubview(containerView)
-//        containerView.snp.makeConstraints { (make) in
-//            make.height.equalTo(82)
-//        }
-        
-        contentView.addSubview(iconImage)
-        iconImage.snp.makeConstraints { (make) in
-            make.left.equalToSuperview().offset(12)
+        contentView.addSubview(stack)
+        stack.snp.makeConstraints { (make) in
             make.centerY.equalToSuperview()
-            make.height.width.equalTo(56)
+            make.width.equalToSuperview().offset(-24)
+            make.left.equalToSuperview().offset(16)
+            make.right.equalToSuperview().offset(-16)
         }
         
-        contentView.addSubview(amountLabel)
-        amountLabel.snp.makeConstraints { (make) in
-            make.centerY.equalToSuperview()
-            make.right.equalToSuperview().offset(-12)
+        middleStack.snp.makeConstraints { (make) in
+            make.width.greaterThanOrEqualTo(120)
         }
-        
-        contentView.addSubview(titleLabel)
-        titleLabel.snp.makeConstraints { (make) in
-            make.left.equalTo(iconImage.snp.right).offset(12)
-            make.bottom.equalTo(contentView.snp.centerY).offset(1)
-//            make.right.greaterThanOrEqualTo(amountLabel.snp.left).offset(-4)
-        }
-        
-        contentView.addSubview(transactionLabel)
-        transactionLabel.snp.makeConstraints { (make) in
-            make.left.equalTo(titleLabel.snp.left)
-            make.top.equalTo(contentView.snp.centerY).offset(1)
-//            make.right.greaterThanOrEqualTo(amountLabel.snp.left).offset(-4)
-        }
-        
-        let tap = UITapGestureRecognizer()
-        contentView.addGestureRecognizer(tap)
-        let rx_disposeBag = DisposeBag()
-        
-        tap.rx.event.asDriver().mapToVoid().drive(onNext: { [contentView] (_) in
-            print("contentview.frame", contentView.frame)
-        }).disposed(by: rx_disposeBag)
     }
 }
