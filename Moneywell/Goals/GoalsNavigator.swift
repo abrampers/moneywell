@@ -12,6 +12,7 @@ import Shared
 internal protocol GoalsNavigator {
     func toBack()
     func toHahaPage()
+    func toGoalsDetailPage(index: Int)
 }
 
 internal class DefaultGoalsNavigator: GoalsNavigator {
@@ -27,5 +28,9 @@ internal class DefaultGoalsNavigator: GoalsNavigator {
     
     internal func toHahaPage() {
         self.navigationController?.pushViewController(HahaViewController(), animated: true)
+    }
+    
+    internal func toGoalsDetailPage(index: Int) {
+        self.navigationController?.pushViewController(GoalsDetailViewController(index: index), animated: true)
     }
 }

@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
+        UNUserNotificationCenter.current().delegate = self
         UINavigationBar.appearance().tintColor = .black
         UINavigationBar.appearance().backgroundColor = .n500
         UITabBar.appearance().tintColor = .black
@@ -154,3 +154,19 @@ extension AppDelegate {
     }
 }
 
+// MARK: - UNUserNotificationCenterDelegate
+extension AppDelegate: UNUserNotificationCenterDelegate {
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        
+        (window?.rootViewController as? UITabBarController)?.selectedIndex = 0
+        
+        if response.actionIdentifier == Identifiers.yesAction {
+            let recordVC = RecordTransactionViewController()
+            recordVC.edgesForExtendedLayout = []
+            let recordNavCon = UINavigationController(rootViewController: recordVC)
+            window?.rootViewController?.present(recordNavCon, animated: true, completion: nil)
+        }
+        
+        completionHandler()
+    }
+}

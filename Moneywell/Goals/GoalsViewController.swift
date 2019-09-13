@@ -96,7 +96,7 @@ extension GoalsViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        navigator.toHahaPage()
+        navigator.toGoalsDetailPage(index: indexPath.section + indexPath.row)
     }
 }
 

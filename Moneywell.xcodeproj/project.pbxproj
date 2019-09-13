@@ -40,6 +40,10 @@
 		21503B33232B601100761B71 /* GoalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21503B2F232B601100761B71 /* GoalsViewController.swift */; };
 		21503B38232B60F800761B71 /* GoalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21503B37232B60F800761B71 /* GoalTableViewCell.swift */; };
 		21503B3A232B622F00761B71 /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21503B39232B622F00761B71 /* Goal.swift */; };
+		21503B3D232B83D800761B71 /* RecordTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21503B3C232B83D800761B71 /* RecordTransactionViewController.swift */; };
+		21503B40232BA27000761B71 /* GoalsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21503B3F232BA27000761B71 /* GoalsDetailViewController.swift */; };
+		21503B42232BA4BF00761B71 /* GoalAmountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21503B41232BA4BF00761B71 /* GoalAmountView.swift */; };
+		21503B44232BA4CC00761B71 /* GoalTargetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21503B43232BA4CC00761B71 /* GoalTargetView.swift */; };
 		216981FE232779A7009455FF /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216981FD232779A7009455FF /* Category.swift */; };
 		2169820123277D7D009455FF /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2169820023277D7D009455FF /* CategoryTableViewCell.swift */; };
 		21D603B32326529900F075E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D603B22326529900F075E8 /* AppDelegate.swift */; };
@@ -129,6 +133,10 @@
 		21503B2F232B601100761B71 /* GoalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsViewController.swift; sourceTree = "<group>"; };
 		21503B37232B60F800761B71 /* GoalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalTableViewCell.swift; sourceTree = "<group>"; };
 		21503B39232B622F00761B71 /* Goal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
+		21503B3C232B83D800761B71 /* RecordTransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTransactionViewController.swift; sourceTree = "<group>"; };
+		21503B3F232BA27000761B71 /* GoalsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsDetailViewController.swift; sourceTree = "<group>"; };
+		21503B41232BA4BF00761B71 /* GoalAmountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalAmountView.swift; sourceTree = "<group>"; };
+		21503B43232BA4CC00761B71 /* GoalTargetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalTargetView.swift; sourceTree = "<group>"; };
 		216981FD232779A7009455FF /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		2169820023277D7D009455FF /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 		21698202232788D5009455FF /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
@@ -266,6 +274,7 @@
 		21503B2D232B5FB800761B71 /* Goals */ = {
 			isa = PBXGroup;
 			children = (
+				21503B3E232BA26000761B71 /* View */,
 				21503B36232B60DC00761B71 /* Cell */,
 				21503B2E232B601100761B71 /* GoalsNavigator.swift */,
 				21503B2F232B601100761B71 /* GoalsViewController.swift */,
@@ -279,6 +288,24 @@
 				21503B37232B60F800761B71 /* GoalTableViewCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		21503B3B232B83BD00761B71 /* RecordTransaction */ = {
+			isa = PBXGroup;
+			children = (
+				21503B3C232B83D800761B71 /* RecordTransactionViewController.swift */,
+			);
+			path = RecordTransaction;
+			sourceTree = "<group>";
+		};
+		21503B3E232BA26000761B71 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				21503B3F232BA27000761B71 /* GoalsDetailViewController.swift */,
+				21503B41232BA4BF00761B71 /* GoalAmountView.swift */,
+				21503B43232BA4CC00761B71 /* GoalTargetView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		216981FC23277919009455FF /* Model */ = {
@@ -334,6 +361,7 @@
 		21D603B12326529900F075E8 /* Moneywell */ = {
 			isa = PBXGroup;
 			children = (
+				21503B3B232B83BD00761B71 /* RecordTransaction */,
 				21503B2D232B5FB800761B71 /* Goals */,
 				21503B1D232A617A00761B71 /* Spendings */,
 				21503AE7232A058E00761B71 /* Moneywell.entitlements */,
@@ -681,7 +709,9 @@
 				216981FE232779A7009455FF /* Category.swift in Sources */,
 				21503AD3232901AF00761B71 /* HomeNavigator.swift in Sources */,
 				21503ADD2329274400761B71 /* TransactionTableViewCell.swift in Sources */,
+				21503B44232BA4CC00761B71 /* GoalTargetView.swift in Sources */,
 				21503AD4232901AF00761B71 /* HomeViewController.swift in Sources */,
+				21503B3D232B83D800761B71 /* RecordTransactionViewController.swift in Sources */,
 				21503B26232AAF6400761B71 /* LimitView.swift in Sources */,
 				21503AE62329E54200761B71 /* Balance.swift in Sources */,
 				21503B38232B60F800761B71 /* GoalTableViewCell.swift in Sources */,
@@ -689,6 +719,8 @@
 				21D603C52326545E00F075E8 /* CategoryViewController.swift in Sources */,
 				21503AE42329E4D700761B71 /* BalanceView.swift in Sources */,
 				21503B3A232B622F00761B71 /* Goal.swift in Sources */,
+				21503B40232BA27000761B71 /* GoalsDetailViewController.swift in Sources */,
+				21503B42232BA4BF00761B71 /* GoalAmountView.swift in Sources */,
 				21503B21232A62B200761B71 /* Spending.swift in Sources */,
 				21503B1F232A61AB00761B71 /* SpendingsViewController.swift in Sources */,
 				2169820123277D7D009455FF /* CategoryTableViewCell.swift in Sources */,
