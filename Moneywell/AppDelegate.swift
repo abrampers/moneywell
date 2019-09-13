@@ -28,12 +28,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         UINavigationBar.appearance().tintColor = .black
         UINavigationBar.appearance().backgroundColor = .n500
+        UITabBar.appearance().tintColor = .black
         
         let tabBar = UITabBarController()
         
         let homeNavCon = DefaultNavigationController(rootViewController: HomeViewController())
-        let familyNavCon = DefaultNavigationController(rootViewController: FamilyViewController())
-        tabBar.viewControllers = [homeNavCon, familyNavCon]
+        homeNavCon.tabBarItem = UITabBarItem(title: "Home",
+                                             image: UIImage(named: "home-deselected")?.withRenderingMode(.alwaysOriginal),
+                                             selectedImage: UIImage(named: "home-selected")?.withRenderingMode(.alwaysOriginal))
+        
+        let goalsNavCon = DefaultNavigationController(rootViewController: GoalsViewController())
+        goalsNavCon.tabBarItem = UITabBarItem(title: "Goals",
+                                              image: UIImage(named: "goals-deselected")?.withRenderingMode(.alwaysOriginal),
+                                              selectedImage: UIImage(named: "goals-selected")?.withRenderingMode(.alwaysOriginal))
+        
+        let spendingsNavCon = DefaultNavigationController(rootViewController: SpendingsViewController())
+        spendingsNavCon.tabBarItem = UITabBarItem(title: "Spendings",
+                                               image: UIImage(named: "spendings-deselected")?.withRenderingMode(.alwaysOriginal),
+                                               selectedImage: UIImage(named: "spendings-selected")?.withRenderingMode(.alwaysOriginal))
+        
+        tabBar.viewControllers = [homeNavCon, goalsNavCon, spendingsNavCon]
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = tabBar

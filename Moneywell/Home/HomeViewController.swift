@@ -156,8 +156,6 @@ internal class HomeViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-        tabBarItem = UITabBarItem(title: "", image: UIImage(named: "home-deselected"), selectedImage: UIImage(named: "home-selected"))
-        
         setupConstraints()
     }
     

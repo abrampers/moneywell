@@ -1,5 +1,5 @@
 //
-//  FamilyNavigator.swift
+//  GoalsNavigator.swift
 //  Moneywell
 //
 //  Created by Abram Situmorang on 13/09/19.
@@ -9,13 +9,12 @@
 import UIKit
 import Shared
 
-internal protocol FamilyNavigator {
+internal protocol GoalsNavigator {
     func toBack()
     func toHahaPage()
-    func toCategoryPage(index: Int)
 }
 
-internal class DefaultFamilyNavigator: FamilyNavigator {
+internal class DefaultGoalsNavigator: GoalsNavigator {
     private let navigationController: UINavigationController?
     
     internal init(navigationController: UINavigationController?) {
@@ -28,9 +27,5 @@ internal class DefaultFamilyNavigator: FamilyNavigator {
     
     internal func toHahaPage() {
         self.navigationController?.pushViewController(HahaViewController(), animated: true)
-    }
-    
-    internal func toCategoryPage(index: Int) {
-        self.navigationController?.pushViewController(CategoryViewController(index: index), animated: true)
     }
 }

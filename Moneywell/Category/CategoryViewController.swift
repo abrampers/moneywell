@@ -23,12 +23,11 @@ public class CategoryViewController: UIViewController {
     }()
     
     private let iconView = UIImageView()
-    private let titleLabel = UILabel()
     private let transactionLabel = UILabel()
     private let amountLabel = UILabel()
     
     private lazy var upperStack: UIStackView = {
-        let stack = UIStackView(arrangedSubviews: [self.iconView, self.titleLabel, self.transactionLabel, self.amountLabel])
+        let stack = UIStackView(arrangedSubviews: [self.iconView, self.transactionLabel, self.amountLabel])
         stack.axis = .vertical
         stack.alignment = .center
         stack.spacing = 8
@@ -99,8 +98,8 @@ public class CategoryViewController: UIViewController {
     }
     
     private func setupUI() {
+        title = category.title
         iconView.image = category.image
-        titleLabel.attributedText = .text(category.title, size: 30, weight: .bold, color: .black)
         transactionLabel.attributedText = .text("\(category.numTransaction) Transactions", size: 16, weight: .book, color: .n100)
         amountLabel.attributedText = .text(category.amount.currencyFormat, size: 40, weight: .bold, color: .black)
         

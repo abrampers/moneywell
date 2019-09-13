@@ -10,12 +10,12 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-internal class FamilyViewController: UIViewController {
+internal class SpendingsViewController: UIViewController {
     private let rx_disposeBag = DisposeBag()
     private let categorySubject = PublishSubject<Int>()
     
-    private lazy var navigator: FamilyNavigator = {
-        let nav = DefaultFamilyNavigator(navigationController: self.navigationController)
+    private lazy var navigator: SpendingsNavigator = {
+        let nav = DefaultSpendingsNavigator(navigationController: self.navigationController)
         return nav
     }()
     
@@ -88,7 +88,9 @@ internal class FamilyViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-        tabBarItem = UITabBarItem(title: "", image: UIImage(named: "spendings-deselected"), selectedImage: UIImage(named: "spendings-selected"))
+        tabBarItem = UITabBarItem(title: "",
+                                  image: UIImage(named: "spendings-deselected")?.withRenderingMode(.alwaysOriginal),
+                                  selectedImage: UIImage(named: "spendings-selected")?.withRenderingMode(.alwaysOriginal))
         
         setupConstraints()
     }
@@ -135,7 +137,7 @@ internal class FamilyViewController: UIViewController {
     }
 }
 
-extension FamilyViewController: UITableViewDelegate {
+extension SpendingsViewController: UITableViewDelegate {
     public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 84
     }
@@ -157,7 +159,7 @@ extension FamilyViewController: UITableViewDelegate {
     }
 }
 
-extension FamilyViewController: UITableViewDataSource {
+extension SpendingsViewController: UITableViewDataSource {
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CategoryTableViewCell.identifier) as! CategoryTableViewCell
         

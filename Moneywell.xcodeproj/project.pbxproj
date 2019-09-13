@@ -31,11 +31,15 @@
 		21503B19232A514F00761B71 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21698202232788D5009455FF /* Int+Extension.swift */; };
 		21503B1A232A514F00761B71 /* Observable+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21503AD72329104500761B71 /* Observable+Extensions.swift */; };
 		21503B1C232A5A5D00761B71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21503B1B232A5A5D00761B71 /* Assets.xcassets */; };
-		21503B1F232A61AB00761B71 /* FamilyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21503B1E232A61AB00761B71 /* FamilyViewController.swift */; };
+		21503B1F232A61AB00761B71 /* SpendingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21503B1E232A61AB00761B71 /* SpendingsViewController.swift */; };
 		21503B21232A62B200761B71 /* Spending.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21503B20232A62B200761B71 /* Spending.swift */; };
 		21503B24232A633200761B71 /* SpendingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21503B23232A633200761B71 /* SpendingView.swift */; };
 		21503B26232AAF6400761B71 /* LimitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21503B25232AAF6400761B71 /* LimitView.swift */; };
-		21503B2A232AB58900761B71 /* FamilyNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21503B27232AB58900761B71 /* FamilyNavigator.swift */; };
+		21503B2A232AB58900761B71 /* SpendingsNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21503B27232AB58900761B71 /* SpendingsNavigator.swift */; };
+		21503B32232B601100761B71 /* GoalsNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21503B2E232B601100761B71 /* GoalsNavigator.swift */; };
+		21503B33232B601100761B71 /* GoalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21503B2F232B601100761B71 /* GoalsViewController.swift */; };
+		21503B38232B60F800761B71 /* GoalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21503B37232B60F800761B71 /* GoalTableViewCell.swift */; };
+		21503B3A232B622F00761B71 /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21503B39232B622F00761B71 /* Goal.swift */; };
 		216981FE232779A7009455FF /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216981FD232779A7009455FF /* Category.swift */; };
 		2169820123277D7D009455FF /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2169820023277D7D009455FF /* CategoryTableViewCell.swift */; };
 		21D603B32326529900F075E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D603B22326529900F075E8 /* AppDelegate.swift */; };
@@ -116,11 +120,15 @@
 		21503B06232A4E4000761B71 /* Shared.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Shared.h; sourceTree = "<group>"; };
 		21503B07232A4E4000761B71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		21503B1B232A5A5D00761B71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		21503B1E232A61AB00761B71 /* FamilyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyViewController.swift; sourceTree = "<group>"; };
+		21503B1E232A61AB00761B71 /* SpendingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpendingsViewController.swift; sourceTree = "<group>"; };
 		21503B20232A62B200761B71 /* Spending.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spending.swift; sourceTree = "<group>"; };
 		21503B23232A633200761B71 /* SpendingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpendingView.swift; sourceTree = "<group>"; };
 		21503B25232AAF6400761B71 /* LimitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LimitView.swift; sourceTree = "<group>"; };
-		21503B27232AB58900761B71 /* FamilyNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyNavigator.swift; sourceTree = "<group>"; };
+		21503B27232AB58900761B71 /* SpendingsNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpendingsNavigator.swift; sourceTree = "<group>"; };
+		21503B2E232B601100761B71 /* GoalsNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsNavigator.swift; sourceTree = "<group>"; };
+		21503B2F232B601100761B71 /* GoalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsViewController.swift; sourceTree = "<group>"; };
+		21503B37232B60F800761B71 /* GoalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalTableViewCell.swift; sourceTree = "<group>"; };
+		21503B39232B622F00761B71 /* Goal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
 		216981FD232779A7009455FF /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		2169820023277D7D009455FF /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 		21698202232788D5009455FF /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
@@ -235,15 +243,15 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		21503B1D232A617A00761B71 /* Family */ = {
+		21503B1D232A617A00761B71 /* Spendings */ = {
 			isa = PBXGroup;
 			children = (
 				216981FF23277CC0009455FF /* Cell */,
 				21503B22232A632100761B71 /* View */,
-				21503B1E232A61AB00761B71 /* FamilyViewController.swift */,
-				21503B27232AB58900761B71 /* FamilyNavigator.swift */,
+				21503B1E232A61AB00761B71 /* SpendingsViewController.swift */,
+				21503B27232AB58900761B71 /* SpendingsNavigator.swift */,
 			);
-			path = Family;
+			path = Spendings;
 			sourceTree = "<group>";
 		};
 		21503B22232A632100761B71 /* View */ = {
@@ -255,6 +263,24 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		21503B2D232B5FB800761B71 /* Goals */ = {
+			isa = PBXGroup;
+			children = (
+				21503B36232B60DC00761B71 /* Cell */,
+				21503B2E232B601100761B71 /* GoalsNavigator.swift */,
+				21503B2F232B601100761B71 /* GoalsViewController.swift */,
+			);
+			path = Goals;
+			sourceTree = "<group>";
+		};
+		21503B36232B60DC00761B71 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				21503B37232B60F800761B71 /* GoalTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		216981FC23277919009455FF /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -262,6 +288,7 @@
 				21503ADE2329280A00761B71 /* Transaction.swift */,
 				21503AE52329E54200761B71 /* Balance.swift */,
 				21503B20232A62B200761B71 /* Spending.swift */,
+				21503B39232B622F00761B71 /* Goal.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -307,7 +334,8 @@
 		21D603B12326529900F075E8 /* Moneywell */ = {
 			isa = PBXGroup;
 			children = (
-				21503B1D232A617A00761B71 /* Family */,
+				21503B2D232B5FB800761B71 /* Goals */,
+				21503B1D232A617A00761B71 /* Spendings */,
 				21503AE7232A058E00761B71 /* Moneywell.entitlements */,
 				216982042327CF1D009455FF /* Category */,
 				216981FC23277919009455FF /* Model */,
@@ -646,21 +674,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21503B32232B601100761B71 /* GoalsNavigator.swift in Sources */,
 				21503ADF2329280A00761B71 /* Transaction.swift in Sources */,
 				21D603B32326529900F075E8 /* AppDelegate.swift in Sources */,
+				21503B33232B601100761B71 /* GoalsViewController.swift in Sources */,
 				216981FE232779A7009455FF /* Category.swift in Sources */,
 				21503AD3232901AF00761B71 /* HomeNavigator.swift in Sources */,
 				21503ADD2329274400761B71 /* TransactionTableViewCell.swift in Sources */,
 				21503AD4232901AF00761B71 /* HomeViewController.swift in Sources */,
 				21503B26232AAF6400761B71 /* LimitView.swift in Sources */,
 				21503AE62329E54200761B71 /* Balance.swift in Sources */,
+				21503B38232B60F800761B71 /* GoalTableViewCell.swift in Sources */,
 				21503B24232A633200761B71 /* SpendingView.swift in Sources */,
 				21D603C52326545E00F075E8 /* CategoryViewController.swift in Sources */,
 				21503AE42329E4D700761B71 /* BalanceView.swift in Sources */,
+				21503B3A232B622F00761B71 /* Goal.swift in Sources */,
 				21503B21232A62B200761B71 /* Spending.swift in Sources */,
-				21503B1F232A61AB00761B71 /* FamilyViewController.swift in Sources */,
+				21503B1F232A61AB00761B71 /* SpendingsViewController.swift in Sources */,
 				2169820123277D7D009455FF /* CategoryTableViewCell.swift in Sources */,
-				21503B2A232AB58900761B71 /* FamilyNavigator.swift in Sources */,
+				21503B2A232AB58900761B71 /* SpendingsNavigator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
